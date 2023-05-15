@@ -1,4 +1,4 @@
-// Importing module
+l// Importing module
 // import { addToCart, totalPrice as price, tq } from './shoppingCart.js';
 // console.log(price, tq);
 // addToCart('bread', 5);
@@ -73,7 +73,7 @@ ShoppingCart2.addToCart('pizza', 2);
 console.log(ShoppingCart2);
 console.log(ShoppingCart2.shippingCost);
 */
-
+/*
 // Export
 export.addToCart = function (product, quantity) {
     cart.push({ product, quantity });
@@ -83,6 +83,32 @@ export.addToCart = function (product, quantity) {
 
   // Import
   const { addToCart } = require("./shoppingCart.js");
+*/
+
+import cloneDeep from "./node_modules/loadash-es/cloneDeep.js";
+
+const state = {
+    cart: [
+        { product: "bread", quantity: 5 },
+        { product: "pizza", quantity: 5 },
+    ],
+    user: {loggedIn: true},
+
+}
+const stateClone = Object.assign({}, state);
+const stateDeepClone = cloneDeep(state);
+
+state.user.loggedIn = false;
+console.log(stateClone);
+
+console.log(stateDeepClone);
+
+
+
+
+
+
+
 
 
 
