@@ -42,7 +42,7 @@ console.log(lastPost);
 const lastPost2 = await getLastPost();
 console.log(lastPost2);
 */
-
+/*
 // IIFE
 const ShoppingCart2 = (function () {
   const cart = [];
@@ -72,8 +72,17 @@ ShoppingCart2.addToCart('apple', 4);
 ShoppingCart2.addToCart('pizza', 2);
 console.log(ShoppingCart2);
 console.log(ShoppingCart2.shippingCost);
+*/
 
+// Export
+export.addToCart = function (product, quantity) {
+    cart.push({ product, quantity });
+    console.log(`${quantity} ${product} added to cart
+    (shipping cost is ${shippingCost}$)`);
+  };
 
+  // Import
+  const { addToCart } = require("./shoppingCart.js");
 
 
 
