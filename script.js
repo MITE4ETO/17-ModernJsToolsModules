@@ -128,4 +128,3 @@ import 'core-js/stable';
 
 // Polyfilling async functions
 import 'regenerator-runtime/runtime';
-
